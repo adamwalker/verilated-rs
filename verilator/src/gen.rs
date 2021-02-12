@@ -239,7 +239,8 @@ impl Verilator {
             .include(root.join("include/vltstd"))
             .include(&dst)
             .file(dst.join(format!("V{}.cpp", top_module)))
-            .file(dst.join(format!("V{}__Syms.cpp", top_module)));
+            .file(dst.join(format!("V{}__Syms.cpp", top_module)))
+            .file(dst.join(format!("V{}__Slow.cpp", top_module)));
 
         for &(ref f, _) in &self.files {
             match f.extension() {

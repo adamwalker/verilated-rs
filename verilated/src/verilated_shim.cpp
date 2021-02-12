@@ -87,12 +87,6 @@ verilated_fatal_on_vpi_error() {
   return Verilated::fatalOnVpiError() ? 1 : 0;
 }
 
-/// Flush callback for VCD waves
-void
-verilated_flush_cb(VerilatedVoidCb cb) {
-  Verilated::flushCb(cb);
-}
-
 void
 verilated_flush_call() {
   Verilated::flushCall();

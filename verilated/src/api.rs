@@ -22,7 +22,6 @@ mod ffi {
         pub fn verilated_assert_on() -> c_int;
         pub fn verilated_set_fatal_on_vpi_error(flag: c_int);
         pub fn verilated_fatal_on_vpi_error() -> c_int;
-        //pub fn verilated_flush_cb(cb: VerilatedVoidCb);
         pub fn verilated_flush_call();
         pub fn verilated_command_args(argc: c_int, argv: *const *const c_char);
         //    static CommandArgValues* getCommandArgs() {return &s_args;}
